@@ -2,7 +2,8 @@ import React, {useState} from 'react'
 import {Link} from 'react-router-dom';
 import * as FaIcons from 'react-icons/fa';
 import styled from 'styled-components';
-//import {SidebarData} from './SidebarData';
+import {SidebarData} from './SidebarData';
+import SubMenu from './SubMenu';
 
 const Nav = styled.div`
     background-color: rgb(8, 0, 22);
@@ -55,6 +56,9 @@ const Sidebar = () => {
                     <NavIcon>
                         <FaIcons.FaWindowClose onClick={showSidebar}/>
                     </NavIcon>
+                    {SidebarData.map((item, index) => {
+                        return <SubMenu item={item} key={index} />;
+                    })}
                 </SidebarWrap>
             </SidebarNav>
         </>
