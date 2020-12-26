@@ -1,9 +1,36 @@
-import React from 'react'
+import React from 'react';
+import styled from 'styled-components';
+import Background from '../assets/aranza.jpg';
+import Button from '../components/Button/Button.js'
+
+const Hero = styled.div`
+    width: 100%;
+    height: 90vh;
+    background: linear-gradient(326deg, rgba(2,0,36,0.75) 0%, rgba(9,9,121,0.75) 35%, rgba(0,212,255,0.75) 100%),
+    url(${Background}) center no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+`;
+
+const HeroContent = styled.div`
+    text-align: center;
+    color: #fff;
+`;
 
 const Home = () => {
     return (
         <div className="home">
-            <h1>Home</h1>
+            <Hero>
+                <HeroContent>
+                    <h1>Hey! I'm Aranza Ortega</h1>
+                    <h3>Junior Frontend Developer</h3>
+                    <Button>
+                        Know more
+                    </Button>
+                </HeroContent>
+            </Hero>
         </div>
     )
 }

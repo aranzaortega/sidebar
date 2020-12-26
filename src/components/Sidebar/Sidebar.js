@@ -8,7 +8,7 @@ import { IconContext } from 'react-icons/lib';
 
 const Nav = styled.div`
     background-color: rgb(8, 0, 22);
-    height: 80px;
+    height: 10vh;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -16,7 +16,7 @@ const Nav = styled.div`
 
 const NavIcon = styled(Link)`
     margin-left: 3em;
-    height: 80px;
+    height:  10vh;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -49,7 +49,7 @@ const Sidebar = () => {
         <>
         <IconContext.Provider value={{ color: 'blue' }}>
             <Nav>
-                <NavIcon to="#">
+                <NavIcon>
                     <FaIcons.FaBars onClick={showSidebar}/>
                 </NavIcon>
             </Nav>
@@ -59,7 +59,7 @@ const Sidebar = () => {
                         <FaIcons.FaWindowClose onClick={showSidebar}/>
                     </NavIcon>
                     {SidebarData.map((item, index) => {
-                        return <SubMenu item={item} key={index} />;
+                        return <SubMenu item={item} key={index}/>;
                     })}
                 </SidebarWrap>
             </SidebarNav>
