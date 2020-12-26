@@ -4,6 +4,7 @@ import * as FaIcons from 'react-icons/fa';
 import styled from 'styled-components';
 import {SidebarData} from './SidebarData';
 import SubMenu from './SubMenu';
+import { IconContext } from 'react-icons/lib';
 
 const Nav = styled.div`
     background-color: rgb(8, 0, 22);
@@ -46,6 +47,7 @@ const Sidebar = () => {
 
     return (
         <>
+        <IconContext.Provider value={{ color: 'blue' }}>
             <Nav>
                 <NavIcon to="#">
                     <FaIcons.FaBars onClick={showSidebar}/>
@@ -61,6 +63,7 @@ const Sidebar = () => {
                     })}
                 </SidebarWrap>
             </SidebarNav>
+        </IconContext.Provider>
         </>
     )
 }
