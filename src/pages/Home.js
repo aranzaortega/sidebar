@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Background from '../assets/aranza.jpg';
 import Button from '../components/Button/Button.js'
+import {Link} from 'react-router-dom';
 
 const Hero = styled.div`
     width: 100%;
@@ -24,9 +25,9 @@ const Home = () => {
         <div className="home">
             <Hero>
                 <HeroContent>
-                    <h1>Hey! I'm Aranza Ortega</h1>
+                    <h1>Hey! I'm Aranza</h1>
                     <h3>Junior Frontend Developer</h3>
-                    <Button>
+                    <Button onClick='/about'>
                         Know more
                     </Button>
                 </HeroContent>
