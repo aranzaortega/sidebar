@@ -26,7 +26,7 @@ const Home = () => {
             <Hero>
                 <HeroContent>
                     <h1>Hey! I'm Aranza</h1>
-                    <h3>Junior Frontend Developer</h3>
+                    <h3>Junior UX/UI Designer & Developer</h3>
                     <Button onClick='/about'>
                         Know more
                     </Button>
